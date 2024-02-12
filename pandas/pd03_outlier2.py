@@ -27,7 +27,7 @@ print('이상치의 위치 : ', outliers_loc)
 import matplotlib.pyplot as plt
 plt.boxplot(aaa)
 plt.show()
-  
+    
   
 ### 과제 // 이상치 결측치를 적용한 결과를 넣을것
 # pd_04_1_따릉이
