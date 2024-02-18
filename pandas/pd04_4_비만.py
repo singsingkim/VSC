@@ -16,9 +16,10 @@ y= train['NObeyesdad']
 # print(train.shape,test.shape)   #(20758, 17) (13840, 16)    NObeyesdad
 # print(x.shape,y.shape)  #(20758, 16) (20758,)
 
+
 TRAINSIZE = 0.8
-RS = 20
-NUM = 50
+RS = 21
+NUM = 51
 
 SAVENAME = f'biman{NUM}'
 
@@ -37,13 +38,14 @@ for column in columns_to_encode:
     lb.fit(test[column])
     test[column] = lb.transform(test[column])
     
-# print(x['Gender'])
-# print(test['CALC'])
+
+
 x_train,x_test,y_train,y_test=train_test_split(
     x,y,train_size=TRAINSIZE,random_state=RS,stratify=y)
 
 # print(x_train.shape,y_train.shape)  #(18682, 16) (18682,)
 # print(x_test.shape,y_test.shape)    #(2076, 16) (2076,)
+
 import random
 
 r = random.randint(1, 100)
@@ -80,10 +82,9 @@ sample.to_csv(path + F"{SAVENAME}.csv", index=False)
 accuracy = accuracy_score(y_test, y_pred)
 print("Accuracy:", accuracy)
 print("r",r)
-'''
-Accuracy: 0.9142581888246628        903등
-Accuracy: 0.9185934489402697    4번
-'''
+
+
+
 
 # 이 코드에서 사용된 LightGBM 모델의 파라미터들에 대해 간단히 설명하겠습니다.
 
