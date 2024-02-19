@@ -17,8 +17,8 @@ y= train['NObeyesdad']
 # print(x.shape,y.shape)  #(20758, 16) (20758,)
 
 TRAINSIZE = 0.8
-RS = 20
-NUM = 50
+RS = 25
+NUM = 55
 
 SAVENAME = f'biman{NUM}'
 
